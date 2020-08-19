@@ -1,0 +1,38 @@
+[2mWed 19 Aug 06:13:42 BST 2020[0m
+[4mCatching ctrl+KEY in ncurses.[0m
+
+So we all know the familiar routine for catching
+key presses in ncurses yes.
+
+	char c = getch()
+	switch ( c ) {
+		case 'a':
+			// a was pressed
+			break;
+		case 'b'
+			// b pressed
+			break;
+	}
+
+But what about if we want to catch Ctrl+KEY? How do
+we check for that illusive thing, the Ctrl key?
+
+Well it is actually easier than ou would think.
+There is a simple macro that can be used that gives
+you access to this functionallity!
+
+	#define ctrl(x) ((x) & 0x1f) // <-- THIS ONE
+
+	char c = getch()
+	switch ( c ) {
+		case 'a':
+			// a was pressed
+			break;
+		case ctrl( 'a' ):
+			// Ctrl+a was pressed
+			break;
+	}
+
+Thats it, enjoy your ctrl+s for save!
+
+
