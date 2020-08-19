@@ -1,0 +1,18 @@
+[2mWed 19 Aug 19:19:59 BST 2020[0m
+[4mSo what is a clog?[0m
+
+A clog is a tiny blog that is meant to be read in the terminal using the 
+curl command. If you want to start your own clog simplyfollow these steps:
+
+1) Copy this clog directory to the root of your website.
+2) Delete this post (remove the line in index for it too).
+3) run new.sh to create a new post.
+
+Thats it, your clog will be viewable at:
+
+	curl -s www.yourwebsite.com/clog/index
+
+You can add any introduction text you want before the "Posts:" line in index.
+Everythin after "Posts:" should be a line referencing a post.
+
+Enjoy!

@@ -3,7 +3,7 @@ A blog that is read with curl (curl + blog = clog)!
 
 # The format of a clog (a roough draft).
 
-A clog is the absolout smallest possible instance of a blog I could imagine and has a simple structure. All you need is a folder called ```clog``` in the root of your website that contains a file called ```index```. The only other file I have included in the spec at this point is ```links``` and is optional. Posts in your clog are just numbered files that contain the text for the post. None of these files have an file extension.   
+A clog is the smallest possible instance of a blog I could imagine and has a simple structure. All you need is a folder called ```clog``` in the root of your website that contains a file called ```index```. The only other file I have included in the spec at this point is ```links``` and is optional. Posts in your clog are just numbered files that contain the text for the post. None of these files have an file extension.   
   
 Thats all there is to it.  
   
