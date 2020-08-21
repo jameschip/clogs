@@ -21,8 +21,17 @@ check_url () {
 	else
 		echo "No clog at $CLOG_URL"
 		CLOG_URL=""
-		BASE_URL=""
 	fi
+}
+
+print_bookmarks () {
+	clear
+	n=1
+	while read line;
+	do
+		echo "$n : $line"
+	done < ~/.clog_bookmarks
+	echo ""
 }
 
 clear
@@ -44,6 +53,11 @@ do
 		CLOG_URL="${REPLY}/clog/index"
 		check_url
 		;;
+	'G')
+		read -p "Goto bookmark: "
+		CLOG_URL=$(sed "${REPLY}q;d" ~/.clog_bookmarks)
+		check_url
+		;;
 	'p')
 		read -p "Goto post: "
 		CLOG_URL="${BASE_URL}/clog/${REPLY}"
@@ -53,8 +67,23 @@ do
 		CLOG_URL="${BASE_URL}/clog/index"
 		check_url
 		;;
+	'B')
+		read -n1 -p "Add ${CLOG_URL} to bookmarks? y/n"
+		case $REPLY in 
+			'y')
+				echo $CLOG_URL >> ~/.clog_bookmarks
+				;;
+			*)
+				;;
+		esac
+		echo ""
+		;;
+	'b')
+		print_bookmarks
+		;;
 	'h')
 		print_help
 		;;
+
 	esac
 done
