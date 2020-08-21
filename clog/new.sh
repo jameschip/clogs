@@ -4,10 +4,10 @@ DT=$(date)
 IFS=''
 INDEX_FILE=index
 
-echo "Title of blog post to create:"
+echo -n "Title of blog post to create: "
 read TITLE
 
-FILE_COUNT=$(ls | wc -l)
+FILE_COUNT=$(( $(ls | grep -e '[0-9+]' | wc -l) + 1 ))
 
 printf "Entry created : %s\n" $FILE_COUNT
 
