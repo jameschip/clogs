@@ -8,6 +8,9 @@ print_help () {
         echo "p - goto post while at clog"
         echo "i - show index of current clog"
         echo "h - this help text"
+	echo "B - Add this clog to bookmarks"
+	echo "b - list bookmarks"
+	echo "G - goto bookmark"
         echo "q - quit"
 	echo ""
 }
