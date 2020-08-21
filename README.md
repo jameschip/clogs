@@ -31,7 +31,7 @@ As you add more clog posts add them to the bottom of your index file, this way w
 
 ## The new.sh
 
-While not sessisary the new.sh can be run to easily create the template forr a new post for you! It counts how many files there are in the directory and then creates a new post with that number as an ID and adds the appropriate line to the end of the index file for you!
+While not necessary the new.sh can be run to easily create the template for a new post for you! It counts how many files there are in the directory and then creates a new post with that number as an ID and adds the appropriate line to the end of the index file for you!
 
 ## The clogs.sh
 
@@ -39,5 +39,5 @@ This is a really simple clog reading client in a bash script! You can check to s
 
 ## Why?
 
-The web is getting a bit fat and bandwidth is getting used up at an alarming rate. Blog posts about bloat problems on the web are themselves running into multiple megabytes in size just to present you with 500 or so words of content. This is obscene! A blog, in its modt distilled form is a text document. The clog was a simple experiment in stripping the blog back to its smallest possible size. Due to the nature of the clog it is also naturally accessible to any maching that can run curl (most machines) including very old machines that would struggle now just displaying an average post from medium. You can read your clog from a computer that doesnt even have a GUI!  
+The web is getting a bit fat and bandwidth is getting used up at an alarming rate. Blog posts about bloat problems on the web are themselves running into multiple megabytes in size just to present you with 500 or so words of content. This is obscene! A blog, in its most distilled form is a text document. The clog was a simple experiment in stripping the blog back to its smallest possible size. Due to the nature of the clog it is also naturally accessible to any maching that can run curl (most machines) including very old machines that would struggle now just displaying an average post from medium. You can read your clog from a computer that doesnt even have a GUI!  
   
