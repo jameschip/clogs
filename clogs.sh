@@ -1,5 +1,6 @@
 #!/bin/bash
 
+BOOKMARK_FILE=~/.clog_bookmarks
 BASE_URL=""
 CLOG_URL=""
 
@@ -34,7 +35,7 @@ print_bookmarks () {
 	do
 		echo "$n : $line"
 		n=$((n+1))
-	done < ~/.clog_bookmarks
+	done < $BOOKMARK_FILE
 	echo ""
 }
 
@@ -59,7 +60,8 @@ do
 		;;
 	'G')
 		read -p "Goto bookmark: "
-		CLOG_URL=$(sed "${REPLY}q;d" ~/.clog_bookmarks)
+		CLOG_URL=$(sed "${REPLY}q;d" $BOOKMARK_FILE)
+		BASE_URL=$(sed "${REPLY}q;d" $BOOKMARK_FILE | grep -P -o -m 1 "[^/]*" | head -1)
 		check_url
 		;;
 	'p')
