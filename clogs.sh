@@ -33,6 +33,7 @@ print_bookmarks () {
 	while read line;
 	do
 		echo "$n : $line"
+		n=$((n+1))
 	done < ~/.clog_bookmarks
 	echo ""
 }
