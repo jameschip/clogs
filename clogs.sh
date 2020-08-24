@@ -17,9 +17,9 @@ print_help () {
 }
 
 check_url () {
-	if curl --output /dev/null --silent --fail -r 0-0 "$CLOG_URL"; then
+	if curl --output /dev/null --silent --fail -L -r 0-0 "$CLOG_URL"; then
 		clear
-		curl -s $CLOG_URL
+		curl -Ls $CLOG_URL
 		echo ""
 		echo ""
 	else
